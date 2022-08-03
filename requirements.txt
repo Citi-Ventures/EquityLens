@@ -1,0 +1,9 @@
+numpy>=1.15
+scipy
+statistics
+pandas>=0.24
+prettytable
+IPython
+scikit-learn
+math
+joblib>=1.0.0
