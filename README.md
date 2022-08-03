@@ -1,11 +1,11 @@
 # <img src="https://github.com/xie1027/EquityLens/blob/main/logo.png?raw=true" alt="drawing" width="70"/> Equity Lens | DEI Toolbox  
 
 
-EquityLens is an open-source library that aims to improve the data quality during pre-processing through equity lens.
+EquityLens is an open-source library that aims to improve the data quality during pre-processing through an equity lens.
 
-1. It assesses whether and why disparities exist. Currently, we enable pinpointing disparity in model outcomes; however, we don’t explain why these disparities exist and what contributes to them.  
+1. It assesses whether and why disparities exist. Currently, we enable pinpointing the disparities in model outcomes; however, we don’t explain why these disparities exist and what contributes to them.  
 
-2. Most tools mitigate unfairness and disparity in the labels, which achieve equal outcomes. Equality produces fair products when society is structured in a fair way. However, when society lacks justice, equality no longer distributes the same resources to all populations. That’s where Equity plays a role.  
+2. Most tools mitigate unfairness and disparity in the output to achieve equal outcomes. Equality produces fair products when society is structured in a fair way. However, when society lacks justice, equality no longer distributes the same resources to all populations. That’s where Equity plays a role.    
 
 Check out [EquityLens](https://github.com/Citi-Ventures/EquityLens)
 
