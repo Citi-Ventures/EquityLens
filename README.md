@@ -7,18 +7,18 @@ EquityLens is an open-source library that aims to improve the data quality durin
 
 2. Most tools mitigate unfairness and disparity in the labels, which achieve equal outcomes. Equality produces fair products when society is structured in a fair way. However, when society lacks justice, equality no longer distributes the same resources to all populations. That’s where Equity plays a role.  
 
-Check out [EquityLens](https://github.com/xie1027/EquityLens)
+Check out [EquityLens](https://github.com/Citi-Ventures/EquityLens)
 
 
 ## Installation and updating
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install or uninstall EquityLens like below. 
 
 ```bash
-pip install git+ssh://git@github.com/xie1027/EquityLens.git
+pip install git+ssh://git@github.com/Citi-Ventures/EquityLens.git
 pip uninstall EquityLens
 ```
 
-We use SSH keys authentication to install this package, as this is stored under a private Github repo. You can see the instruction [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+We use SSH keys authentication to install this package, as this is stored under a private Github repo. You can find the instruction [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 
 ```bash
 # 1. Generating a new SSH key
