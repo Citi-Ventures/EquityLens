@@ -23,7 +23,7 @@ def read_data(data_name, token):
     if data_name == 'dii':
        return pd.read_csv('https://raw.githubusercontent.com/Citi-Ventures/EquityLens/main/EquityLens/datasets/dii_2020.csv?token={token}'.format(token=token))
     elif data_name == 'german':
-      return pd.read_csv('https://raw.githubusercontent.com/Citi-Ventures/EquityLens/main/EquityLens/datasets/dii_2020.csv?token={token}'.format(token=token))
+      return pd.read_csv('https://raw.githubusercontent.com/Citi-Ventures/EquityLens/main/EquityLens/datasets/german.csv?token={token}'.format(token=token))
     else:
       print('Data not found!')
 
