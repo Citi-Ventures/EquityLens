@@ -14,13 +14,15 @@ Check out [EquityLens](https://github.com/Citi-Ventures/EquityLens)
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install or uninstall EquityLens like below. 
 
 ```bash
-pip install git+ssh://git@github.com/Citi-Ventures/EquityLens.git
+pip3 install git+https://github.com/Citi-Ventures/EquityLens.git 
 pip uninstall EquityLens
 ```
-
-We use SSH keys authentication to install this package, as this is stored under a private Github repo. You can find the instruction [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+Do the following steps if EquityLens is a **PRIVATE** repo.
 
 ```bash
+
+# We use SSH keys authentication to install this package, as this is stored under a private Github repo. You can find the instruction [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+
 # 1. Generating a new SSH key
 # Paste the text below, substituting in your GitHub email address.
 $ ssh-keygen -t ed25519 -C "your_email@example.com"
@@ -60,15 +62,14 @@ Features:
 ```python
 import EquityLens
 
-token = 'replace-with-your-token'
-EquityLens.functions.company_dei_score("Citigroup", token)
+EquityLens.functions.company_dei_score("Citigroup")
 
 company_list = ['FLWS', 'ATNF', 'RETC', 'ONCP', 'RTNB', 'C']
-EquityLens.functions.sample_dei_score(company_list, token)
+EquityLens.functions.sample_dei_score(company_list)
 
 
 var_list = [0.11853823, 0.061011526, 0.114244634, 2.617285942]
-EquityLens.functions.compute_score(var_list, 'variety' , 'Finance', token)
+EquityLens.functions.compute_score(var_list, 'variety' , 'Finance')
 
 protected_class = 'sex'
 feature = 'salary'
