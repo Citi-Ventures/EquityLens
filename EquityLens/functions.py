@@ -18,12 +18,15 @@ def custom_formatwarning(msg, *args, **kwargs):
     # ignore everything except the message
     return str(msg) + '\n'
 
-def read_data(data_name, token):
+#def read_data(data_name, token):
+def read_data(data_name):
     import pandas as pd
     if data_name == 'dii':
-       return pd.read_csv('https://raw.githubusercontent.com/Citi-Ventures/EquityLens/main/EquityLens/datasets/dii_2020.csv?token={token}'.format(token=token))
+       #return pd.read_csv('https://raw.githubusercontent.com/Citi-Ventures/EquityLens/main/EquityLens/datasets/dii_2020.csv?token={token}'.format(token=token))
+       return pd.read_csv('https://raw.githubusercontent.com/Citi-Ventures/EquityLens/main/EquityLens/datasets/dii_2020.csv')
     elif data_name == 'german':
-      return pd.read_csv('https://raw.githubusercontent.com/Citi-Ventures/EquityLens/main/EquityLens/datasets/german.csv?token={token}'.format(token=token))
+      #return pd.read_csv('https://raw.githubusercontent.com/Citi-Ventures/EquityLens/main/EquityLens/datasets/german.csv?token={token}'.format(token=token))
+      return pd.read_csv('https://raw.githubusercontent.com/Citi-Ventures/EquityLens/main/EquityLens/datasets/german.csv')
     else:
       print('Data not found!')
 
@@ -41,8 +44,10 @@ def compute_hhi(var_list):
 
 
 # Evaluate company's (company name or stock code) DEI efforts in three dimensions
-def company_dei_score(company_name, token):
-  dii = read_data('dii', token)
+#def company_dei_score(company_name, token):
+def company_dei_score(company_name):
+  #dii = read_data('dii', token)
+  dii = read_data('dii')
   dii['company_name_lower'] = dii['company_name'].str.lower()
   company_name = company_name.lower()
   count_com = dii['company_name_lower'].str.contains(company_name).sum()
@@ -73,13 +78,14 @@ def company_dei_score(company_name, token):
       warnings.warn("Company not found!")
 
 # Evaluate data sample representation
-def sample_dei_score(company_list, token):
-  dii = read_data('dii', token)
+#def sample_dei_score(company_list, token):
+def sample_dei_score(company_list):
+  #dii = read_data('dii', token)
+  dii = read_data('dii')
   # inner merge company_list to dii master dataset
   new_list = pd.DataFrame({'stock_code': company_list})
   master = dii.merge(new_list, how='inner', on='stock_code')
   median_scores = master.median()
-
 
   display_markdown('''### Diversity and Inclusion Median Scores, 1-100:''',  raw=True)
 
@@ -99,8 +105,10 @@ def sample_dei_score(company_list, token):
 # dataset: representations
 # input: numeric columns contains the counts between groups (gender or racial)
 # variety: hhi;  separation: std; disparity: cv
-def compute_score(var_list, dii_type, industry, token):
-  dii = read_data('dii', token)
+#def compute_score(var_list, dii_type, industry, token):
+def compute_score(var_list, dii_type, industry):
+  #dii = read_data('dii', token)
+  dii = read_data('dii')
 
   # lower HHI, more diversity!
   if dii_type == 'variety':
